@@ -6,18 +6,28 @@ RUN apt update && \
 
 RUN npm install -g yarn
 
+# rails db:create
 RUN gem install rails -v 7.2.1 && \
-    rails new spina -d postgresql
+  rails new spina -d postgresql
 
 # Set the base directory that will be used from now on
 WORKDIR /spina
 
-# Application dependencies
-# COPY Gemfile ./
-# RUN bundle install
+# RUN rails active_storage:install && \
+#     echo -e "\ngem 'spina'" >> /spina/Gemfile && \
+#     bundle install && \
+#     rails spina:install
+
+RUN rails active_storage:install && \
+  echo "" >> /spina/Gemfile && \
+  echo "gem 'spina'" >> /spina/Gemfile && \
+  bundle install
+
+# RUN rails spina:install
 
 # Create the database
-# RUN rake db:create
+# RUN rake db:create && \
+#   rake db:migrate
 # rails spina:install
 
 CMD rails server
