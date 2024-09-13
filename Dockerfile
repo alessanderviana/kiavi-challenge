@@ -18,8 +18,8 @@ RUN rails active_storage:install && \
   bundle install
 
 # Create the database
-# RUN rake db:create && \
-#   rake db:migrate
+RUN rake db:create && \
+  rake db:migrate
 # rails spina:install
 
 CMD rails server
