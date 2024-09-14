@@ -3,12 +3,18 @@ version: "3.9"
 services:
 
   postgres:
-    image: postgres:15
+    image: postgres:15-alpine
     environment:
-      POSTGRES_USER: spina
-      POSTGRES_PASSWORD: spinA@2024
-    ports: 
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_USER: postgres
+      # POSTGRES_PASSWORD: spinA@2024
+    ports:
       - '5432:5432'
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
     volumes:
       - spina-postgres:/var/lib/postgresql/data
 
@@ -17,8 +23,9 @@ services:
       context: .
     volumes:
       - ./spina:/opt/app
-    links:
-      - postgres
+    depends_on:
+      postgres:
+        condition: service_healthy
     ports:
       - '3000:3000'
 
