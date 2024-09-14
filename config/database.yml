@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: spina_dev
+  pool: 5
+  username: spina
+  password:
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: spina_prod
+  pool: 5
+  username: spina
+  password:
+  host: localhost
