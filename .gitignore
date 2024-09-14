@@ -32,6 +32,7 @@
 /public/assets
 
 config/database*
+config/database.*
 
 env-development
 env-production
