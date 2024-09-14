@@ -12,6 +12,8 @@ RUN gem install rails -v 7.2.1 && \
 # Set the base directory that will be used from now on
 WORKDIR /spina
 
+COPY config/ .
+
 RUN rails active_storage:install && \
   echo "" >> /spina/Gemfile && \
   echo "gem 'spina'" >> /spina/Gemfile && \
