@@ -1,17 +1,23 @@
 development:
-  adapter: postgresql
-  encoding: unicode
-  database: spina_dev
-  pool: 5
-  username: spina
-  password:
-  host: localhost
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
+  # ENTER THIS *EXACTLY* AS THIS, THIS READS THE VALUE OF THE DATABASE_URL environment variable programatically
+
+  # adapter: postgresql
+  # encoding: unicode
+  # database: spina_dev
+  # pool: 5
+  # username: postgres
+  # password:
+  # host: 127.0.0.1
+  # port: 5432
 
 production:
   adapter: postgresql
   encoding: unicode
   database: spina_prod
   pool: 5
-  username: spina
+  username: postgres
   password:
-  host: localhost
+  host: 127.0.0.1
+  port: 5432
