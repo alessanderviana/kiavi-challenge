@@ -30,3 +30,8 @@
 !/tmp/storage/.keep
 
 /public/assets
+
+config/database*
+
+env-development
+env-production
