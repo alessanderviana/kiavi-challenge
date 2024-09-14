@@ -1,10 +1,15 @@
 FROM ruby:slim-bullseye
 
+ARG ENVIRONMENT=$ENVIRONMENT
+ENV ENVIRONMENT=$ENVIRONMENT
+
 # Operating system dependencies
 RUN apt update && \
-  apt install -y nodejs npm curl postgresql-client libpq-dev zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev
+  apt install -y nodejs npm curl postgresql-client libpq-dev libsqlite3-dev sqlite3 \
+  zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libxml2-dev \
+  libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev
 
-RUN npm install -g yarn
+# RUN npm install -g yarn
 
 RUN gem install rails -v 7.2.1 && \
   rails new spina -d postgresql
@@ -13,6 +18,7 @@ RUN gem install rails -v 7.2.1 && \
 WORKDIR /spina
 
 COPY config/ .
+COPY env-$ENVIRONMENT ./.env
 
 RUN rails active_storage:install && \
   echo "" >> /spina/Gemfile && \
