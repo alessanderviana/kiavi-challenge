@@ -9,8 +9,6 @@ RUN apt update && \
   zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libxml2-dev \
   libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev
 
-# RUN npm install -g yarn
-
 RUN gem install rails -v 7.2.1 && \
   rails new spina -d postgresql
 
@@ -18,7 +16,6 @@ RUN gem install rails -v 7.2.1 && \
 WORKDIR /spina
 
 COPY config/ .
-# COPY env-$ENVIRONMENT ./.env
 
 RUN rails active_storage:install && \
   echo "" >> /spina/Gemfile && \
@@ -28,8 +25,6 @@ RUN rails active_storage:install && \
 # Create the database
 # RUN rake db:create && \
 #   rake db:migrate
-# RUN rake db:create
-# RUN rake db:migrate
 # rails spina:install
 
 CMD rails server
