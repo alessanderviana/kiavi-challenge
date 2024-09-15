@@ -12,20 +12,29 @@ services:
     volumes:
       - spina-postgres:/var/lib/postgresql/data
 
-  spina_dev:
-    build:
-      context: .
-      args:
-        ENVIRONMENT: development
-    environment:
-      DATABASE_URL: postgresql://postgres@postgres
+  web_test:
+    build: .
     volumes:
-      - ./spina:/opt/app
-    depends_on:
-      - postgres
+      - ./:/app
+    working_dir: /app
     command: puma
     ports:
-      - '3001:3000'
+      - 3010:3000
+
+  # spina_dev:
+  #   build:
+  #     context: .
+  #     args:
+  #       ENVIRONMENT: development
+  #   environment:
+  #     DATABASE_URL: postgresql://postgres@postgres
+  #   volumes:
+  #     - ./spina:/opt/app
+  #   depends_on:
+  #     - postgres
+  #   command: puma
+  #   ports:
+  #     - '3001:3000'
 
   # spina_prod:
   #   build:
