@@ -32,25 +32,25 @@ services:
       DATABASE_URL: postgresql://postgres@postgres
     volumes:
       - ./:/app
-      # - ./spina:/opt/app
     depends_on:
       - postgres
-    # command: puma
+      - spina_prod
     ports:
       - '3001:3000'
 
-  # spina_prod:
-  #   build:
-  #     context: .
-  #     args:
-  #       ENVIRONMENT: production
-  #   volumes:
-  #     - ./spina:/opt/app
-  #   depends_on:
-  #     postgres:
-  #       condition: service_healthy
-  #   ports:
-  #     - '3000:3000'
+  spina_prod:
+    build:
+      context: .
+      args:
+        ENVIRONMENT: production
+    environment:
+      DATABASE_URL: postgresql://postgres@postgres
+    volumes:
+      - ./:/app
+    depends_on:
+      - postgres
+    ports:
+      - '3000:3000'
 
 volumes:
   spina-postgres:
