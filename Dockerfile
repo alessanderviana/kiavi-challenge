@@ -16,13 +16,13 @@ ADD Gemfile Gemfile.lock /app/
 
 RUN bundle install
 
-# && \
-#   rails new spina -d postgresql
+# Add the entrypoint script that will be executed every time the container starts.
+COPY entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
 
-# Set the base directory that will be used from now on
-# WORKDIR /spina
+ENTRYPOINT ["entrypoint.sh"]
 
-# COPY config/ .
+EXPOSE 3000
 
 # RUN rails active_storage:install && \
 #   echo "" >> /spina/Gemfile && \
@@ -35,3 +35,5 @@ RUN bundle install
 # rails spina:install
 
 # CMD rails server
+# Runs a rails server command to start the rails server, pointing it to local host.
+CMD ["rails", "server", "-b", "0.0.0.0"]
