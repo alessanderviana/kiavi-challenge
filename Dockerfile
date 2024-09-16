@@ -29,11 +29,8 @@ EXPOSE 3000
 #   echo "gem 'spina'" >> /spina/Gemfile && \
 #   bundle install
 
-# Create the database
-# RUN rake db:create && \
-#   rake db:migrate
 # rails spina:install
 
 # CMD rails server
 # Runs a rails server command to start the rails server, pointing it to local host.
-CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD ["rails", "server", "-e", "$ENVIRONMENT", "-b", "0.0.0.0"]
