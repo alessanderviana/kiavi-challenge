@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
-rm -f /myapp/tmp/pids/server.pid
-bundle exec rake db:{create,migrate}
+
+bundle exec rake db:create db:migrate RAILS_ENV=__ENV__
 exec "$@"

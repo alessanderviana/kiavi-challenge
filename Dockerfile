@@ -18,7 +18,8 @@ RUN bundle install
 
 # Add the entrypoint script that will be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
-RUN chmod +x /usr/bin/entrypoint.sh
+RUN chmod +x /usr/bin/entrypoint.sh && \
+  sed -i "s/__ENV__/$ENVIRONMENT/g" "/usr/bin/entrypoint.sh"
 
 ENTRYPOINT ["entrypoint.sh"]
 
