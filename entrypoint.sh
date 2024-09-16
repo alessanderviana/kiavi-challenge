@@ -11,7 +11,7 @@ exec "$@"
 rm -f /app/tmp/pids/server.pid
 
 # Runs the "rails server" command accordinly the environment
-if [ $ENVIRONMENT == "production" ]; then
+if [ "$ENVIRONMENT" == "production" ]; then
   rails server -e $ENVIRONMENT -b 0.0.0.0
 else
   rails server -b 0.0.0.0
