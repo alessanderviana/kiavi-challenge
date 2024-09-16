@@ -21,9 +21,9 @@ COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh && \
   sed -i "s/__ENV__/$ENVIRONMENT/g" "/usr/bin/entrypoint.sh"
 
-ENTRYPOINT ["entrypoint.sh"]
-
 EXPOSE 3000
+
+ENTRYPOINT ["entrypoint.sh"]
 
 # RUN rails active_storage:install && \
 #   echo "" >> /spina/Gemfile && \
@@ -35,4 +35,5 @@ EXPOSE 3000
 # CMD rails server
 # Runs a rails server command to start the rails server, pointing it to local host.
 # CMD ["rails", "server", "-e", "$ENVIRONMENT", "-b", "0.0.0.0"]
-CMD ["sh", "-c", "rails server -e $ENVIRONMENT -b 0.0.0.0"]
+# CMD ["sh", "-c", "rails server -e $ENVIRONMENT -b 0.0.0.0"]
+# CMD [ "bash", "-c" ]
