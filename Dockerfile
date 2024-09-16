@@ -34,4 +34,5 @@ EXPOSE 3000
 
 # CMD rails server
 # Runs a rails server command to start the rails server, pointing it to local host.
-CMD ["rails", "server", "-e", "$ENVIRONMENT", "-b", "0.0.0.0"]
+# CMD ["rails", "server", "-e", "$ENVIRONMENT", "-b", "0.0.0.0"]
+CMD ["sh", "-c", "rails server -e $ENVIRONMENT -b 0.0.0.0"]
