@@ -1,24 +1,28 @@
-# README
+# How to use
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Prerequisites
+ . Docker Engine installed
+ . Docker Compose binaries installed
 
-Things you may want to cover:
+### Legend
+a. **ENV:** Can be prod ou dev
+b. **PORT:** 3000 (prod), 3001 (dev)
 
-* Ruby version
+1. Clone the repo and get into the directory
+```shell
+git clone https://github.com/alessanderviana/kiavi-challenge.git
+cd kiavi-challenge
+```
 
-* System dependencies
+2. Run the below commands
+```shell
+docker compose up -d --build
+docker compose exec spina_<ENV> rails g spina:install
+docker compose exec spina_<ENV> rails s -d -b 0.0.0.0
+```
 
-* Configuration
+The build takes about 4 minutes to bring the two applications running (prod and dev). You should follow up the LOGs until you see the sentence: ***Created database 'spina_<ENVIRONMENT>'.***
 
-* Database creation
+The ***spina:install*** command is interactive. You must fill all the fields.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+After the command ***'rails s'*** finish you should be able to access ***http://localhost:<PORT>*** and ***http://localahost:<PORT>/admin.***. Use the email and password you filled on interactive command.
