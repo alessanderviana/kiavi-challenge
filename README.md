@@ -31,7 +31,7 @@ After the command ***'rails s'*** finish you should be able to access ***http://
 
 References:
 -----------
-  <br/>  <br/>
+  <br/>
 >https://guides.rubyonrails.org/getting_started.html
 >https://lipanski.com/posts/dockerfile-ruby-best-practices
 >https://semaphoreci.com/community/tutorials/dockerizing-a-ruby-on-rails-application
