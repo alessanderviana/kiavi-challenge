@@ -32,10 +32,10 @@ After the command ***'rails s'*** finish you should be able to access ***http://
 References:
 -----------
   <br/>
->https://guides.rubyonrails.org/getting_started.html
->https://lipanski.com/posts/dockerfile-ruby-best-practices
->https://semaphoreci.com/community/tutorials/dockerizing-a-ruby-on-rails-application
->https://firehydrant.com/blog/developing-a-ruby-on-rails-app-with-docker-compose/
->https://spinacms.com/docs/getting-started/installing-spina
->https://www.matthewhoelter.com/2020/06/10/setup-spina-cms-with-ruby-on-rails-6-and-digital-ocean.html
->https://medium.com/@gjcarew/dockerizing-a-rails-app-8ef739a19f8
+>https://guides.rubyonrails.org/getting_started.html  <br/>
+>https://lipanski.com/posts/dockerfile-ruby-best-practices  <br/>
+>https://semaphoreci.com/community/tutorials/dockerizing-a-ruby-on-rails-application  <br/>
+>https://firehydrant.com/blog/developing-a-ruby-on-rails-app-with-docker-compose/  <br/>
+>https://spinacms.com/docs/getting-started/installing-spina  <br/>
+>https://www.matthewhoelter.com/2020/06/10/setup-spina-cms-with-ruby-on-rails-6-and-digital-ocean.html  <br/>
+>https://medium.com/@gjcarew/dockerizing-a-rails-app-8ef739a19f8  <br/>
