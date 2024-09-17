@@ -29,6 +29,15 @@ The ***spina:install*** command is interactive. You must fill all the fields.
 
 After the command ***'rails s'*** finish you should be able to access ***http://localhost:[PORT]*** and ***http://localahost:[PORT]/admin.***. Use the email and password you filled on interactive command.  <br/>  <br/>
 
+The challenges:
+---------------
+  <br/>
+1) Learn Ruby on Rails (the basic);  <br/>
+2) How to dockerize a basic Ruby on Rails application;  <br/>
+3) Do the same Docker image works in DEV and PROD;  <br/>
+4) Install and configure Spina CMS to work in DEV and PROD;  <br/>
+5) The 500 error found in Spina production environment (I couldn't solve it).  <br/>  <br/>
+
 References:
 -----------
   <br/>
