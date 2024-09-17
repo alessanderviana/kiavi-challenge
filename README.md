@@ -18,13 +18,13 @@ cd kiavi-challenge
 2. Run the below commands <br/>
 ```shell
 docker compose up -d --build
-docker compose exec spina_<ENV> rails g spina:install
-docker compose exec spina_<ENV> rails s -d -b 0.0.0.0
+docker compose exec spina_[ENV] rails g spina:install
+docker compose exec spina_[ENV] rails s -d -b 0.0.0.0
 ```
  <br/>
 
-The build takes about 4 minutes to bring the two applications running (prod and dev). You should follow up the LOGs until you see the sentence: ***Created database 'spina_<ENVIRONMENT>'.***
+The build takes about 4 minutes to bring the two applications running (prod and dev). You should follow up the LOGs until you see the sentence: ***Created database 'spina_[ENVIRONMENT]'.***
 
 The ***spina:install*** command is interactive. You must fill all the fields.
 
-After the command ***'rails s'*** finish you should be able to access ***http://localhost:<PORT>*** and ***http://localahost:<PORT>/admin.***. Use the email and password you filled on interactive command.
+After the command ***'rails s'*** finish you should be able to access ***http://localhost:[PORT]*** and ***http://localahost:[PORT]/admin.***. Use the email and password you filled on interactive command.
