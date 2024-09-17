@@ -37,10 +37,14 @@ After the command ***'rails s'*** finish you should be able to access ***http://
 4. Install and configure Spina CMS to work in DEV and PROD;  <br/>
 5. The 500 error found in Spina production environment (I couldn't solve it).  <br/>  <br/>
 
+---
+
 ### Attention points:
   <br/>
 * As an automation lover, I'd look for a way passing the spina's parameters automatically for a full automated build experience.  <br/>
 * I'd also think creating a pipeline to avoid writing commands to test and deploy the application.  <br/>  <br/>
+
+---
 
 > ### References:
 >
