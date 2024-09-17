@@ -41,12 +41,11 @@ The challenges:
 Attention points:
 ---
   <br/>
-> - As an automation lover, I'd look for a way passing the spina's parameters automatically for a full automated build experience.  <b/>
+> - As an automation lover, I'd look for a way passing the spina's parameters automatically for a full automated build experience.  <br/>
 > - I'd also think creating a pipeline to avoid writing commands to test and deploy the application.  <br/>  <br/>
 
-References:
----
-  <br/>
+> ### References:
+>
 > https://guides.rubyonrails.org/getting_started.html  <br/>
 > https://lipanski.com/posts/dockerfile-ruby-best-practices  <br/>
 > https://semaphoreci.com/community/tutorials/dockerizing-a-ruby-on-rails-application  <br/>
@@ -54,3 +53,4 @@ References:
 > https://spinacms.com/docs/getting-started/installing-spina  <br/>
 > https://www.matthewhoelter.com/2020/06/10/setup-spina-cms-with-ruby-on-rails-6-and-digital-ocean.html  <br/>
 > https://medium.com/@gjcarew/dockerizing-a-rails-app-8ef739a19f8  <br/>
+>
