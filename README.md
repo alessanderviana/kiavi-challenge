@@ -29,20 +29,18 @@ The ***spina:install*** command is interactive. You must fill all the fields.
 
 After the command ***'rails s'*** finish you should be able to access ***http://localhost:[PORT]*** and ***http://localahost:[PORT]/admin.***. Use the email and password you filled on interactive command.  <br/>  <br/>
 
-The challenges:
----
+### The challenges:
   <br/>
-1) Learn Ruby on Rails (the basic);  <br/>
-2) How to dockerize a basic Ruby on Rails application;  <br/>
-3) Do the same Docker image works in DEV and PROD;  <br/>
-4) Install and configure Spina CMS to work in DEV and PROD;  <br/>
-5) The 500 error found in Spina production environment (I couldn't solve it).  <br/>  <br/>
+1. Learn Ruby on Rails (the basic);  <br/>
+2. How to dockerize a basic Ruby on Rails application;  <br/>
+3. Do the same Docker image works in DEV and PROD;  <br/>
+4. Install and configure Spina CMS to work in DEV and PROD;  <br/>
+5. The 500 error found in Spina production environment (I couldn't solve it).  <br/>  <br/>
 
-Attention points:
----
+### Attention points:
   <br/>
-> - As an automation lover, I'd look for a way passing the spina's parameters automatically for a full automated build experience.  <br/>
-> - I'd also think creating a pipeline to avoid writing commands to test and deploy the application.  <br/>  <br/>
+- As an automation lover, I'd look for a way passing the spina's parameters automatically for a full automated build experience.  <br/>
+- I'd also think creating a pipeline to avoid writing commands to test and deploy the application.  <br/>  <br/>
 
 > ### References:
 >
