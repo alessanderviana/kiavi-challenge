@@ -39,8 +39,8 @@ After the command ***'rails s'*** finish you should be able to access ***http://
 
 ### Attention points:
   <br/>
-- As an automation lover, I'd look for a way passing the spina's parameters automatically for a full automated build experience.  <br/>
-- I'd also think creating a pipeline to avoid writing commands to test and deploy the application.  <br/>  <br/>
+* As an automation lover, I'd look for a way passing the spina's parameters automatically for a full automated build experience.  <br/>
+* I'd also think creating a pipeline to avoid writing commands to test and deploy the application.  <br/>  <br/>
 
 > ### References:
 >
