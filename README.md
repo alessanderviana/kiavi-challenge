@@ -27,4 +27,14 @@ The build takes about 4 minutes to bring the two applications running (prod and 
 
 The ***spina:install*** command is interactive. You must fill all the fields.
 
-After the command ***'rails s'*** finish you should be able to access ***http://localhost:[PORT]*** and ***http://localahost:[PORT]/admin.***. Use the email and password you filled on interactive command.
+After the command ***'rails s'*** finish you should be able to access ***http://localhost:[PORT]*** and ***http://localahost:[PORT]/admin.***. Use the email and password you filled on interactive command. <br/>
+
+References:
+-----------
+ <br/>
+> https://guides.rubyonrails.org/getting_started.html
+https://lipanski.com/posts/dockerfile-ruby-best-practices
+https://semaphoreci.com/community/tutorials/dockerizing-a-ruby-on-rails-application
+https://spinacms.com/docs/getting-started/installing-spina
+https://www.matthewhoelter.com/2020/06/10/setup-spina-cms-with-ruby-on-rails-6-and-digital-ocean.html
+https://medium.com/@gjcarew/dockerizing-a-rails-app-8ef739a19f8
