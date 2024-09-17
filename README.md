@@ -13,14 +13,14 @@ b. **PORT:** 3000 (prod), 3001 (dev) <br/>
 git clone https://github.com/alessanderviana/kiavi-challenge.git
 cd kiavi-challenge
 ```
-<br/>
+ <br/>
 2. Run the below commands
 ```shell
 docker compose up -d --build
 docker compose exec spina_<ENV> rails g spina:install
 docker compose exec spina_<ENV> rails s -d -b 0.0.0.0
 ```
-<br/>
+ <br/>
 The build takes about 4 minutes to bring the two applications running (prod and dev). You should follow up the LOGs until you see the sentence: ***Created database 'spina_<ENVIRONMENT>'.***
 
 The ***spina:install*** command is interactive. You must fill all the fields.
