@@ -29,6 +29,13 @@ The ***spina:install*** command is interactive. You must fill all the fields.
 
 After the command ***'rails s'*** finish you should be able to access ***http://localhost:[PORT]*** and ***http://localahost:[PORT]/admin.***. Use the email and password you filled on interactive command.  <br/>  <br/>
 
+| Deliverables |
+| ----------- |
+| This [repository](https://github.com/alessanderviana/kiavi-challenge/tree/main) |
+| This [readme file](https://github.com/alessanderviana/kiavi-challenge/blob/main/README.md) |
+| The [Dockerfile](./Dockerfile) |
+| The [docker compose file](./docker-compose.yml) |
+
 ### The challenges:
   <br/>
 1. Learn Ruby on Rails (the basic);  <br/>
