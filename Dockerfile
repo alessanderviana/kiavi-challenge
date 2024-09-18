@@ -13,8 +13,7 @@ RUN gem install rails -v 7.2.1
 # Define the working directory
 WORKDIR /app
 
-# Adds the files
-# ADD Gemfile Gemfile.lock /app/
+# Adds the application files
 ADD . .
 
 # Installs all dependencies
