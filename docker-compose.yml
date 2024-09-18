@@ -19,8 +19,8 @@ services:
         ENVIRONMENT: development
     environment:
       DATABASE_URL: postgresql://postgres@postgres
-    volumes:
-      - ./:/app
+    # volumes:
+    #   - ./:/app
     depends_on:
       - postgres
       - spina_prod
@@ -34,8 +34,8 @@ services:
         ENVIRONMENT: production
     environment:
       DATABASE_URL: postgresql://postgres@postgres
-    volumes:
-      - ./:/app
+    # volumes:
+    #   - ./:/app
     depends_on:
       - postgres
     ports:

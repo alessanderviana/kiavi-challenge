@@ -14,7 +14,8 @@ RUN gem install rails -v 7.2.1
 WORKDIR /app
 
 # Adds the files
-ADD Gemfile Gemfile.lock /app/
+# ADD Gemfile Gemfile.lock /app/
+ADD . .
 
 # Installs all dependencies
 # Installs support for cloud storage
