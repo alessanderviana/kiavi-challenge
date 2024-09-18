@@ -19,8 +19,9 @@ ADD . .
 
 # Installs all dependencies
 # Installs support for cloud storage
-RUN bundle install && \
-  rails active_storage:install
+RUN bundle install
+# && \
+#   rails active_storage:install
 
 # The container will listen in this port
 EXPOSE 3000
