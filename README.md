@@ -18,6 +18,7 @@ cd kiavi-challenge
 2. Run the below commands <br/>
 ```shell
 docker compose up -d --build
+docker compose exec spina_[ENV] rails assets:precompile
 docker compose exec spina_[ENV] rails spina:install
 docker compose exec spina_[ENV] rails s -d -b 0.0.0.0
 ```
