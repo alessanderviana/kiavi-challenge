@@ -9,7 +9,7 @@ RUN apt update && \
 # software-properties-common
 
 # Installs Rails
-RUN gem install rails -v 7.2.1
+RUN gem install rails -v 7.2.1 imagemagick-binaries
 
 # Define the working directory
 WORKDIR /app
