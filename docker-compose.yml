@@ -19,6 +19,12 @@ services:
         ENVIRONMENT: development
     environment:
       DATABASE_URL: postgresql://postgres@postgres
+    command: >
+      sh -c "rails active_storage:install &&
+            rails db:migrate &&
+            rails db:create &&
+            rails assets:precompile &&
+            /usr/bin/tail -f /dev/null"
     depends_on:
       - postgres
       - spina_prod
@@ -34,6 +40,12 @@ services:
         ENVIRONMENT: production
     environment:
       DATABASE_URL: postgresql://postgres@postgres
+    command: >
+      sh -c "rails active_storage:install &&
+            rails db:migrate &&
+            rails db:create &&
+            rails assets:precompile &&
+            /usr/bin/tail -f /dev/null"
     depends_on:
       - postgres
     ports:
