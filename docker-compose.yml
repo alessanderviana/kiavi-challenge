@@ -20,9 +20,9 @@ services:
     environment:
       DATABASE_URL: postgresql://postgres@postgres
     command: >
-      sh -c "rails active_storage:install &&
+      sh -c "rails db:create &&
+            rails active_storage:install &&
             rails db:migrate &&
-            rails db:create &&
             rails assets:precompile &&
             /usr/bin/tail -f /dev/null"
     depends_on:
@@ -41,9 +41,9 @@ services:
     environment:
       DATABASE_URL: postgresql://postgres@postgres
     command: >
-      sh -c "rails active_storage:install &&
+      sh -c "rails db:create &&
+            rails active_storage:install &&
             rails db:migrate &&
-            rails db:create &&
             rails assets:precompile &&
             /usr/bin/tail -f /dev/null"
     depends_on:
