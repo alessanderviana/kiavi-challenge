@@ -5,7 +5,8 @@ ENV RAILS_ENV=${ENVIRONMENT}
 
 # Operating system dependencies
 RUN apt update && \
-  apt install -y curl libpq-dev coreutils build-essential software-properties-common
+  apt install -y curl vim libpq-dev coreutils build-essential
+# software-properties-common
 
 # Installs Rails
 RUN gem install rails -v 7.2.1
