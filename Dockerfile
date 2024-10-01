@@ -19,10 +19,9 @@ ADD . .
 
 # Installs all dependencies
 # Installs support for cloud storage
-RUN bundle install && \
-  rails active_storage:install
+RUN bundle install
 
 # The container will listen in this port
 EXPOSE 3000
 
-CMD ["sh", "-c", "rails db:create && /usr/bin/tail -f /dev/null"]
+# CMD ["sh", "-c", "rails db:create && rails assets:precompile && /usr/bin/tail -f /dev/null"]
